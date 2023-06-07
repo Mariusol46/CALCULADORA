@@ -16,12 +16,13 @@ class Calculadora {
     }
 
     agregarNumero(numero){
-        
+        if(numero === '.' && this.valorInferior.includes('.')) return
         this.valorInferior = this.valorInferior + numero
     }
 
     imprimirDisplay() {
         this.textoValorInferior.innerText = this.valorInferior
+        this.textoValorSuperior.innerText = this.valorSuperior
         
     }
 
